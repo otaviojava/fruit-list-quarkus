@@ -1,0 +1,7 @@
+export HOST=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].host"`
+export PASSWORD=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].password"`
+export USER=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].username"`
+export DATABASE=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].path"`
+export JAVA_MEMORY=-Xmx$(jq .info.limits.memory /run/config.json)m
+export JAVA_OPTS="$JAVA_MEMORY -XX:+ExitOnOutOfMemoryError"
+export CREDENTIAL="-Dquarkus.datasource.username=$USER -Dquarkus.datasource.password=$PASSWORD -Dquarkus.datasource.jdbc.url=jdbc:postgresql://${HOST}/${DATABASE}"
