@@ -1,11 +1,10 @@
-# rdb-backend project
+# Fruit List with Quarkus
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 ## Pre req
 * Java 11
-* MySQL 8.0.21 TIp you can use docker with this command: 
-    * `docker run --name=mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=passwd -e MYSQL_DATABASE=temaula -d mysql`
+* PostgreSQL
 * Maven
 
 
