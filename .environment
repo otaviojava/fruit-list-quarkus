@@ -4,3 +4,4 @@ export QUARKUS_DATASOURCE_PASSWORD=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_
 export QUARKUS_DATASOURCE_USERNAME=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].username"`
 export QUARKUS_DATASOURCE_JDBC_URL="jdbc:postgresql://${HOST}/${DATABASE}"
 export JAVA_OPTS="-Xmx$(jq .info.limits.memory /run/config.json)m -XX:+ExitOnOutOfMemoryError"
+export QUARKUS_HTTP_PORT=$PORT
