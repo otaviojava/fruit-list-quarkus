@@ -7,4 +7,4 @@ relationships:
     database: "db:postgresql"
 web:
     commands:
-        start: java -jar target/jpa-angular-1.0-SNAPSHOT-runner.jar
+        start: java -jar $JAVA_OPTS target/jpa-angular-1.0-SNAPSHOT-runner.jar
