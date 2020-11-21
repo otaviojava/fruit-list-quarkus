@@ -5,6 +5,9 @@ hooks:
     build: ./mvnw package -DskipTests
 relationships:
     database: "db:postgresql"
+variables:
+    env:
+        AUTHOR: `echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].path"`
 web:
     commands:
         start: java -jar $JAVA_OPTS target/jpa-angular-1.0-SNAPSHOT-runner.jar
