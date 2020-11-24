@@ -1,0 +1,25 @@
+version: 1
+
+info:
+  id: fruit-list-quarkus
+  name: Helidon
+  description: |
+    <p>This project uses Quarkus, the Supersonic Subatomic Java Framework.</p>
+  tags:
+    - Java
+    - MicroProfile
+    - Maven
+
+  notes:
+    - heading: "Features"
+      content: |
+        Java 11<br />
+        PostgreSQL<br />
+        Automatic TLS certificates<br />
+        Maven-based build<br />
+
+initialize:
+  repository: git://github.com/otaviojava/fruit-list-quarkus.git@master
+  config: null
+  files: []
+  profile: MicroProfile
