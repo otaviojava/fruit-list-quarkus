@@ -1,5 +1,7 @@
 # Fruit List with Quarkus
 
+<a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/otaviojava/fruit-list-quarkus/master/.platform.template.yaml&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://raw.githubusercontent.com/otaviojava/fruit-list-quarkus/master/.platform.template.yaml" target="_blank" title="Deploy with Platform.sh"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg"></a>
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 ## Pre req
@@ -16,6 +18,12 @@ You can run your application in dev mode that enables live coding using:
 ```
 ./mvnw quarkus:dev
 ```
+
+Docker command:
+
+```
+docker run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 --name quarkus_test -e POSTGRES_USER=quarkus_test -e POSTGRES_PASSWORD=quarkus_test -e POSTGRES_DB=quarkus_test -p 5432:5432 postgres:10.5
+``
 
 ## Packaging and running the application
 
