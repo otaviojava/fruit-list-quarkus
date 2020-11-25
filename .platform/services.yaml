@@ -6,3 +6,7 @@
 db:
   type: postgresql:11
   disk: 512
+
+dbmongo:
+  type: mongodb:3.6
+  disk: 512
