@@ -17,6 +17,10 @@ public class Fruit extends PanacheEntity {
     public Fruit() {
     }
 
+    public boolean isEmpty() {
+        return name == null || name.trim().length() == 0;
+    }
+
     public Fruit(String name) {
         this.name = name;
     }
