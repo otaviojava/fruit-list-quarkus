@@ -50,6 +50,9 @@ env:
   # ⬇️ EDIT if you wish to set the kube context's namespace after login. Leave blank to use the default namespace.
   OPENSHIFT_NAMESPACE: "test"
 
+  IMAGE_NAME: my-java-app
+  IMAGE_TAG: v1
+
   # If you wish to manually provide the APP_NAME and TAG, set them here, otherwise they will be auto-detected.
   APP_NAME: ""
   TAG: ""
