@@ -18,7 +18,7 @@ jobs:
       - name: Check whether OpenShift requests should be done
         id: secrets
         env:
-          secretsavailable: ${{ secrets.OPENSHIFT_SERVER != '' && secrets.OPENSHIFT_TOKEN != '' && github.event.pull_request == '' }}
+          secretsavailable: ${{ secrets.OPENSHIFT_SERVER_URL != '' && secrets.OPENSHIFT_TOKEN != '' && github.event.pull_request == '' }}
         run: |
           echo "available: ${{ env.secretsavailable }}"
           echo "::set-output name=available::${{ env.secretsavailable }}"
@@ -45,7 +45,7 @@ jobs:
         if: ${{ needs.secrets.outputs.available }}
         uses: redhat-actions/oc-login@v1
         with:
-          openshift_server_url: ${{ secrets.OPENSHIFT_SERVER }}
+          openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
           openshift_token: ${{ secrets.OPENSHIFT_TOKEN }}
           namespace: ${{ secrets.OPENSHIFT_NAMESPACE }}
       - name: Deploy
