@@ -1,6 +1,6 @@
 # Fruit List with Quarkus
 
-<a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/otaviojava/fruit-list-quarkus/master/.platform.template.yaml&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://raw.githubusercontent.com/otaviojava/fruit-list-quarkus/master/.platform.template.yaml" target="_blank" title="Deploy with Platform.sh"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg"></a>
+<a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/otaviojava/fruit-list-quarkus/master/.platform.template.yaml&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://raw.githubusercontent.com/otaviojava/fruit-list-quarkus/master/.platform/.platform.template.yaml" target="_blank" title="Deploy with Platform.sh"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg"></a>
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
